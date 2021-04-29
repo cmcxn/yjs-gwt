@@ -1,5 +1,4 @@
 # gwt-boot-sample-basic
-GWT Sample Basic
 
 Basic HelloWorld example for GWT
 
