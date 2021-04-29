@@ -4,9 +4,9 @@ Basic HelloWorld example for GWT
 
 # Starting GWT in SuperDev Mode
 
-The application _[gwt-boot-sample-basic](https://github.com/gwtboot/gwt-boot-samples/tree/master/gwt-boot-sample-basic)_ 
+The application _[gwt-boot-sample-basic](https://github.com/lofidewanto/gwt-boot-sample-basic)_ 
 uses integrated Jetty server from GWT to deliver the HTML host file. 
-This can be done with other Servlet apps as well.
+This can be done with other Servlet apps as well. This webapp also uses [GWT Boot modules](https://github.com/gwtboot/gwt-boot-modules).
 
 ## Step 1 - Run GWT DevMode to automatically compile the code
 
