@@ -2,6 +2,10 @@
 
 Basic HelloWorld example for GWT
 
+# Structure of the Maven Project
+
+![Maven Project Structure](gwt-boot-sample-maven-structure.png?raw=true "Maven Project Structure")
+
 # Starting GWT in SuperDev Mode
 
 The application _[gwt-boot-sample-basic](https://github.com/lofidewanto/gwt-boot-sample-basic)_ 
