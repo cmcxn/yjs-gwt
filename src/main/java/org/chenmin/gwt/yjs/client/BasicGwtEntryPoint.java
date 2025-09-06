@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.github.gwtboot.sample.basic.client;
-
-import java.util.logging.Logger;
+package org.chenmin.gwt.yjs.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
+
+import java.util.logging.Logger;
 
 public class BasicGwtEntryPoint implements EntryPoint {
 

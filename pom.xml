@@ -58,7 +58,7 @@
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
 					<moduleName>
-						com.github.gwtboot.sample.basic.Basic
+                        org.chenmin.gwt.yjs.Basic
 					</moduleName>
 					<startupUrls>
 						<url>/basic/</url>
