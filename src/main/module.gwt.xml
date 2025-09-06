@@ -20,8 +20,7 @@
 <module rename-to="basic">
 	<!-- GWT Boot stuffs -->
 	<inherits name="com.github.gwtboot.starter.Starter"/>
-
 	<!-- Entry Point -->
 	<entry-point
-		class='org.chenmin.gwt.yjs.client.BasicGwtEntryPoint'/>
+		class='org.chenmin.gwt.yjs.client.CollaborativeTextEditor'/>
 </module>

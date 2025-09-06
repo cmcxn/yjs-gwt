@@ -26,8 +26,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Demo GWT Webapp</title>
-    <script src="https://cdn.jsdelivr.net/npm/yjs@latest/dist/yjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/y-websocket@latest/dist/y-websocket.min.js"></script>
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, "PingFang SC", Arial, sans-serif;
+            margin: 24px;
+        }
+        textarea {
+            width: 100%;
+            height: 40vh;
+            padding: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .gwt-TextBox {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .gwt-Button {
+            padding: 5px 10px;
+            margin: 0 10px;
+        }
+        code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
     <!--                                           -->
     <!-- This script loads your compiled module.   -->
     <!-- If you add any GWT meta tags, they must   -->
@@ -57,6 +82,6 @@
 </noscript>
 
 <div id="helloButton"/>
-<div id="editor"/>
+
 </body>
 </html>
