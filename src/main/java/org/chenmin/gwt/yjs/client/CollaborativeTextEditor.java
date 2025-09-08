@@ -103,7 +103,7 @@ public class CollaborativeTextEditor implements EntryPoint {
             @Override
             public void onKeyUp(KeyUpEvent event) {
                 Y.transact(doc, () -> {
-                    ytext.delete(0, ytext.length());
+                    ytext.delete(0, ytext.getLength());
                     ytext.insert(0, textArea.getValue());
                 });
             }

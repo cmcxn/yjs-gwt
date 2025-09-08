@@ -2,6 +2,7 @@ package org.chenmin.gwt.yjs.client.yjs;
 
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -19,8 +20,8 @@ public class YText {
     @JsMethod
     public native void insert(int index, String content);
     
-    @JsMethod
-    public native int length();
+    @JsProperty
+    public native int getLength();
     
     @JsMethod
     public native void observe(TextObserver observer);
