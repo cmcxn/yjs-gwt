@@ -5,19 +5,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * Event for Y.Text changes.
+ * Changes object for Y.Text events containing delta information.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-public class YTextEvent extends YEvent {
+public class YTextChanges {
     
     /**
-     * Changes in the text-delta format.
-     */
-    @JsProperty
-    public native YTextChanges getChanges();
-    
-    /**
-     * Text delta for changes (alias for getChanges().getDelta()).
+     * Text-Delta format for calculating differences.
      */
     @JsProperty
     public native YDelta[] getDelta();

@@ -23,6 +23,8 @@ import org.chenmin.gwt.yjs.client.websocket.WebsocketProvider;
 import org.chenmin.gwt.yjs.client.yjs.Doc;
 import org.chenmin.gwt.yjs.client.yjs.Y;
 import org.chenmin.gwt.yjs.client.yjs.YText;
+import org.chenmin.gwt.yjs.client.yjs.YTextEvent;
+import org.chenmin.gwt.yjs.client.yjs.YTransaction;
 
 /**
  * Main entry point for the collaborative text editor application.
@@ -145,7 +147,7 @@ public class CollaborativeTextEditor implements EntryPoint {
         });
         
         // Set up text observation
-        ytext.observe((event) -> {
+        ytext.observe((YTextEvent event, YTransaction transaction) -> {
             String incoming = ytext.toString();
             if (!incoming.equals(textArea.getValue())) {
                 textArea.setValue(incoming);
