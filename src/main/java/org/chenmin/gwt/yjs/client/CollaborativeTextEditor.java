@@ -1,7 +1,6 @@
 package org.chenmin.gwt.yjs.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.Scheduler;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -16,9 +15,8 @@ import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-import org.apache.tools.ant.input.InputHandler;
-import org.chenmin.gwt.yjs.client.examples.YjsExamples;
-import org.chenmin.gwt.yjs.client.examples.YjsXmlExamples;
+import org.chenmin.gwt.yjs.client.test.YjsExamples;
+import org.chenmin.gwt.yjs.client.test.YjsXmlExamples;
 import org.chenmin.gwt.yjs.client.test.JSSetTest;
 import org.chenmin.gwt.yjs.client.indexeddb.IndexeddbPersistence;
 import org.chenmin.gwt.yjs.client.websocket.StatusEvent;

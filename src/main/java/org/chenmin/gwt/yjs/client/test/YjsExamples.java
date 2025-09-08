@@ -1,4 +1,4 @@
-package org.chenmin.gwt.yjs.client.examples;
+package org.chenmin.gwt.yjs.client.test;
 
 import com.google.gwt.core.client.GWT;
 import org.chenmin.gwt.yjs.client.yjs.*;
