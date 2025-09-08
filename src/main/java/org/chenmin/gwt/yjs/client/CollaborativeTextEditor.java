@@ -19,6 +19,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import org.apache.tools.ant.input.InputHandler;
 import org.chenmin.gwt.yjs.client.examples.YjsExamples;
 import org.chenmin.gwt.yjs.client.examples.YjsXmlExamples;
+import org.chenmin.gwt.yjs.client.test.JSSetTest;
 import org.chenmin.gwt.yjs.client.indexeddb.IndexeddbPersistence;
 import org.chenmin.gwt.yjs.client.websocket.StatusEvent;
 import org.chenmin.gwt.yjs.client.websocket.WebsocketProvider;
@@ -170,6 +171,9 @@ public class CollaborativeTextEditor implements EntryPoint {
     
     private void runXmlExamples() {
 
+        // Test the YMapEvent fix first
+        JSSetTest.testYMapEventKeysChanged();
+        
         // 调用 YjsExamples 的测试方法
         YjsExamples.demonstrateDocUsage();
         YjsExamples.demonstrateTextUsage();

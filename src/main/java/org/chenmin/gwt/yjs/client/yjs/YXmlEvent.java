@@ -25,7 +25,8 @@ public class YXmlEvent extends YEvent {
     
     /**
      * Set of keys that changed (for attribute changes in XmlElement).
+     * Returns a JavaScript Set wrapped with JSInterop for proper API compatibility.
      */
     @JsProperty
-    public native Object getKeysChanged();
+    public native JSSet<String> getKeysChanged();
 }

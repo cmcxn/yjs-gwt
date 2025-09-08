@@ -72,7 +72,7 @@ public class YjsExamples {
         
         // Observe changes
         map.observe((YMapEvent event, YTransaction transaction) -> {
-            GWT.log("Map changed, keys affected: " + event.getKeysChanged().size());
+            GWT.log("Map changed, keys affected: " + event.getKeysChanged().getSize());
         });
         
         // Update and delete
