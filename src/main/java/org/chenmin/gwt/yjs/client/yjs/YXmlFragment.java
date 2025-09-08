@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * Wrapper for Y.XmlFragment - a shared XML fragment type.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Y.XmlFragment")
-public class YXmlFragment {
+public class YXmlFragment extends YAbstractType {
     
     @JsConstructor
     public YXmlFragment() {}

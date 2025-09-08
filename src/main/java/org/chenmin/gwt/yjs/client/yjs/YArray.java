@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * Wrapper for Y.Array - a shared type to store data in a sequence-like data structure.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Y.Array")
-public class YArray {
+public class YArray extends YAbstractType {
     
     @JsConstructor
     public YArray() {}

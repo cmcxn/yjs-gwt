@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * Wrapper for Y.Map - a shared type with a similar API to global.Map.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Y.Map")
-public class YMap {
+public class YMap extends YAbstractType {
     
     @JsConstructor
     public YMap() {}

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * Wrapper for Y.Text - shared text type for collaborative editing.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Y.Text")
-public class YText {
+public class YText extends YAbstractType {
     
     @JsConstructor
     public YText() {}
