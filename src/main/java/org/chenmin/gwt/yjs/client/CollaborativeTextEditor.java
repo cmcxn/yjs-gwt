@@ -17,6 +17,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 import org.apache.tools.ant.input.InputHandler;
+import org.chenmin.gwt.yjs.client.examples.YjsExamples;
+import org.chenmin.gwt.yjs.client.examples.YjsXmlExamples;
 import org.chenmin.gwt.yjs.client.indexeddb.IndexeddbPersistence;
 import org.chenmin.gwt.yjs.client.websocket.StatusEvent;
 import org.chenmin.gwt.yjs.client.websocket.WebsocketProvider;
@@ -47,6 +49,8 @@ public class CollaborativeTextEditor implements EntryPoint {
         
         // Then inject the Yjs scripts and wait for them to load
         YjsLoader.injectScripts(() -> {
+            // Run XML examples to demonstrate the new JSInterop wrappers
+            runXmlExamples();
             initYjs("my-roomname");
         });
     }
@@ -80,6 +84,15 @@ public class CollaborativeTextEditor implements EntryPoint {
             }
         });
         roomPanel.add(reconnectBtn);
+        
+        Button xmlExamplesBtn = new Button("运行 XML 示例");
+        xmlExamplesBtn.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                runXmlExamples();
+            }
+        });
+        roomPanel.add(xmlExamplesBtn);
         
         statusLabel = new Label("未连接");
         roomPanel.add(statusLabel);
@@ -153,5 +166,14 @@ public class CollaborativeTextEditor implements EntryPoint {
                 textArea.setValue(incoming);
             }
         });
+    }
+    
+    private void runXmlExamples() {
+        // Run comprehensive XML examples to demonstrate JSInterop wrappers
+        YjsXmlExamples.demonstrateXmlFragmentUsage();
+        YjsXmlExamples.demonstrateXmlElementUsage();
+        YjsXmlExamples.demonstrateXmlTextUsage();
+        YjsXmlExamples.demonstrateRelativePositionUsage();
+        YjsXmlExamples.demonstrateCombinedXmlUsage();
     }
 }
