@@ -97,6 +97,30 @@ public class Doc {
     public native YXmlFragment getXmlFragment(String name);
     
     /**
+     * Define a shared Y.XmlElement type.
+     */
+    @JsMethod
+    public native YXmlElement getXmlElement();
+    
+    /**
+     * Define a shared Y.XmlElement type with a name.
+     */
+    @JsMethod
+    public native YXmlElement getXmlElement(String name);
+    
+    /**
+     * Define a shared Y.XmlText type.
+     */
+    @JsMethod
+    public native YXmlText getXmlText();
+    
+    /**
+     * Define a shared Y.XmlText type with a name.
+     */
+    @JsMethod
+    public native YXmlText getXmlText(String name);
+    
+    /**
      * Destroy this Y.Doc instance.
      */
     @JsMethod
