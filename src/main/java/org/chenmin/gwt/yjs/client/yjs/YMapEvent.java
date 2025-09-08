@@ -3,22 +3,23 @@ package org.chenmin.gwt.yjs.client.yjs;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import java.util.Set;
 
 /**
- * Event for Y.Text changes.
+ * Event for Y.Map changes.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-public class YTextEvent extends YEvent {
+public class YMapEvent extends YEvent {
     
     /**
-     * Changes in the text-delta format.
+     * A Set containing all keys that were modified during a transaction.
      */
     @JsProperty
-    public native YTextChanges getChanges();
+    public native Set<String> getKeysChanged();
     
     /**
-     * Text delta for changes (alias for getChanges().getDelta()).
+     * Compute the differences for map changes.
      */
     @JsProperty
-    public native YDelta[] getDelta();
+    public native YMapChanges getChanges();
 }

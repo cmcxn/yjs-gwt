@@ -5,20 +5,20 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * Event for Y.Text changes.
+ * Information about a specific key change in Y.Map.
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-public class YTextEvent extends YEvent {
+public class YMapKeyChange {
     
     /**
-     * Changes in the text-delta format.
+     * The action performed: 'add', 'update', or 'delete'.
      */
     @JsProperty
-    public native YTextChanges getChanges();
+    public native String getAction();
     
     /**
-     * Text delta for changes (alias for getChanges().getDelta()).
+     * The previous value before the change.
      */
     @JsProperty
-    public native YDelta[] getDelta();
+    public native Object getOldValue();
 }
