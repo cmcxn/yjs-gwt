@@ -155,9 +155,9 @@ public class YjsXmlExamples {
         
         Doc doc = new Doc();
         
-        // Method 1: Define as top-level type
-        YXmlText topLevelText = doc.getXmlText("my xmltext type");
-        GWT.log("Created top-level Y.XmlText");
+        // Method 1: Create a standalone Y.XmlText instance
+        YXmlText topLevelText = new YXmlText();
+        GWT.log("Created standalone Y.XmlText");
         
         // Method 2: Define Y.XmlText that can be included into document
         YXmlText xmlText = new YXmlText();
