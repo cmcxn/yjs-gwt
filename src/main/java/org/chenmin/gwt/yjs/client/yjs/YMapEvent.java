@@ -3,7 +3,6 @@ package org.chenmin.gwt.yjs.client.yjs;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import java.util.Set;
 
 /**
  * Event for Y.Map changes.
@@ -13,9 +12,10 @@ public class YMapEvent extends YEvent {
     
     /**
      * A Set containing all keys that were modified during a transaction.
+     * Returns a JavaScript Set wrapped with JSInterop for proper API compatibility.
      */
     @JsProperty
-    public native Set<String> getKeysChanged();
+    public native JSSet<String> getKeysChanged();
     
     /**
      * Compute the differences for map changes.
