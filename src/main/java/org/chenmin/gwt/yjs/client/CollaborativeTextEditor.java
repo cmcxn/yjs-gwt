@@ -169,6 +169,14 @@ public class CollaborativeTextEditor implements EntryPoint {
     }
     
     private void runXmlExamples() {
+
+        // 调用 YjsExamples 的测试方法
+        YjsExamples.demonstrateDocUsage();
+        YjsExamples.demonstrateTextUsage();
+        YjsExamples.demonstrateMapUsage();
+        YjsExamples.demonstrateArrayUsage();
+        YjsExamples.demonstrateUndoManagerUsage();
+        YjsExamples.demonstrateTransactionUsage();
         // Run comprehensive XML examples to demonstrate JSInterop wrappers
         YjsXmlExamples.demonstrateXmlFragmentUsage();
         YjsXmlExamples.demonstrateXmlElementUsage();
