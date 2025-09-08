@@ -62,7 +62,7 @@ public class YjsExamples {
         
         // Set values
         map.set("name", "John Doe");
-        map.set("age", 30);
+        map.set("age", Double.valueOf(30));
         map.set("active", true);
         
         GWT.log("Map size: " + map.getSize());
@@ -76,7 +76,7 @@ public class YjsExamples {
         });
         
         // Update and delete
-        map.set("age", 31);
+        map.set("age", Double.valueOf(31));
         map.delete("active");
         GWT.log("Updated map, final size: " + map.getSize());
     }
@@ -150,7 +150,7 @@ public class YjsExamples {
         doc.transact(() -> {
             text.insert(0, "Batched operations");
             map.set("operation", "batch");
-            map.set("timestamp", System.currentTimeMillis());
+            map.set("timestamp", Double.valueOf(System.currentTimeMillis()));
         });
         
         GWT.log("Transaction completed - Text: " + text.toString());
