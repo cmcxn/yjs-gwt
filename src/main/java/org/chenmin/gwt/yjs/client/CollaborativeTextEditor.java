@@ -40,12 +40,11 @@ public class CollaborativeTextEditor implements EntryPoint {
     
     @Override
     public void onModuleLoad() {
-        // First inject the Yjs scripts
-        YjsLoader.injectScripts();
+        // First create the UI
+        createUI();
         
-        // Wait a bit for scripts to load
-        Scheduler.get().scheduleDeferred(() -> {
-            createUI();
+        // Then inject the Yjs scripts and wait for them to load
+        YjsLoader.injectScripts(() -> {
             initYjs("my-roomname");
         });
     }
