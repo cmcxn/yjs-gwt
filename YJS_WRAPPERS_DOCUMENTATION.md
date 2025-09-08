@@ -88,7 +88,7 @@ YMap map = doc.getMap("shared-map");
 
 // Basic operations
 map.set("name", "John Doe");
-map.set("age", 30);
+map.set("age", Double.valueOf(30));  // Use Double.valueOf() for integers
 map.set("active", true);
 
 // Get values
@@ -115,6 +115,8 @@ map.observe((YMapEvent event, YTransaction transaction) -> {
     });
 });
 ```
+
+**Important Note on Numeric Values**: When setting numeric values (int, long) in Y.Map or other JSInterop methods, always convert them to Double using `Double.valueOf()` to ensure proper JavaScript type conversion. GWT JSInterop converts Java int/long primitives to JavaScript objects, but Y.js expects JavaScript numbers.
 
 ### Y.Array
 
@@ -294,6 +296,19 @@ public class CollaborativeTextEditor implements EntryPoint {
 4. **Type Safety**: While the wrappers use `Object` for flexibility, cast to appropriate types when needed.
 
 5. **Error Handling**: Wrap Y.js operations in try-catch blocks as needed.
+
+6. **Numeric Values**: **IMPORTANT** - Always use `Double.valueOf()` when setting numeric values (int, long) in Y.js shared types:
+   ```java
+   // ❌ Wrong - will cause "Unexpected content type" errors
+   map.set("age", 30);
+   map.set("timestamp", System.currentTimeMillis());
+   
+   // ✅ Correct - converts to proper JavaScript numbers
+   map.set("age", Double.valueOf(30));
+   map.set("timestamp", Double.valueOf(System.currentTimeMillis()));
+   ```
+   
+   This is necessary because GWT JSInterop converts Java int/long primitives to JavaScript objects, but Y.js expects JavaScript numbers.
 
 ## Example: Complete Collaborative Editor
 
