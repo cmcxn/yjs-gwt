@@ -108,17 +108,7 @@ public class Doc {
     @JsMethod
     public native YXmlElement getXmlElement(String name);
     
-    /**
-     * Define a shared Y.XmlText type.
-     */
-    @JsMethod
-    public native YXmlText getXmlText();
-    
-    /**
-     * Define a shared Y.XmlText type with a name.
-     */
-    @JsMethod
-    public native YXmlText getXmlText(String name);
+
     
     /**
      * Destroy this Y.Doc instance.
