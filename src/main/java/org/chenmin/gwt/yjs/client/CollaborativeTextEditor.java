@@ -39,6 +39,7 @@ public class CollaborativeTextEditor implements EntryPoint {
     
     private TextArea textArea;
     private TextBox roomInput;
+    private TextBox serverInput;
     private Label statusLabel;
     
     @Override
@@ -104,9 +105,17 @@ public class CollaborativeTextEditor implements EntryPoint {
         textArea.getElement().setAttribute("placeholder", "打开多个本地页面（同一房间）即可看到全量覆盖同步。");
         mainPanel.add(textArea);
         
-        // Server info
-        HTML serverInfo = new HTML("<p>服务器地址：<code>ws://127.0.0.1:3001/collaboration</code>（请自行在本机启动 y-websocket 服务）</p>");
-        mainPanel.add(serverInfo);
+        // Server address input
+        HorizontalPanel serverPanel = new HorizontalPanel();
+        serverPanel.setSpacing(5);
+        serverPanel.add(new Label("服务器地址："));
+        
+        serverInput = new TextBox();
+        serverInput.setValue("ws://127.0.0.1:3001/collaboration");
+        serverInput.setWidth("350px");
+        serverPanel.add(serverInput);
+        
+        mainPanel.add(serverPanel);
         
         RootPanel.get().add(mainPanel);
     }
@@ -149,8 +158,9 @@ public class CollaborativeTextEditor implements EntryPoint {
         });
         
         // Set up WebSocket provider
+        String wsUrl = serverInput != null ? serverInput.getValue().trim() : "ws://127.0.0.1:3001/collaboration";
         provider = new WebsocketProvider(
-            "ws://127.0.0.1:3001/collaboration",
+            wsUrl,
             roomName,
             doc
         );
