@@ -41,3 +41,60 @@ target
 
 .env
 */web/WEB-INF/web.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python IDE
+.spyderproject
+.spyproject
+.rope_project_config
+
+# Python data and model directories (for the intent recognition system)
+python_intent_recognition/data/
+python_intent_recognition/models/
+python_intent_recognition/**/data/
+python_intent_recognition/**/models/
+python_intent_recognition/**/demo_*/
+python_intent_recognition/**/quick_demo_*/
+python_intent_recognition/**/evaluation_results/
+python_intent_recognition/**/*.png
+python_intent_recognition/**/*.jpg
+python_intent_recognition/**/*.csv
+python_intent_recognition/**/*.json
+!python_intent_recognition/requirements.txt
+!python_intent_recognition/README.md
